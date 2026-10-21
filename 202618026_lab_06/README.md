@@ -94,4 +94,4 @@ For the image data, KNN performed better with the extracted image features. For 
 
 Reducing the text features in Part C made the model faster and smaller, but resulted in a small loss in predictive performance.
 
-Overall, the project provided practical experience with **feature extraction, text representation, classification, model evaluation, and dimensionality reduction**.
+Overall, the project provided practical experience with **feature extraction, text representation, classification, model evaluation, and dimensionality reduction**
