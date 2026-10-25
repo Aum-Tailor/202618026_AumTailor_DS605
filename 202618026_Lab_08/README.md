@@ -10,9 +10,9 @@ The dataset contains 1,372 observations, four numerical features, and one binary
 
 **Dataset distribution / exploration plot**
 
-![alt text](image.png)
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](Images/image.png)
+![alt text](<Images/image copy.png>)
+![alt text](Images/image-1.png)
 
 - The four features have different distributions, with some showing skewness and potential outliers.
 - Skewness and curtosis have a strong negative correlation (-0.79), while the other feature pairs show weak to moderate correlations.
@@ -26,25 +26,24 @@ A decision tree was implemented from scratch using Gini impurity and entropy. It
 
 **2.1 — Decision tree visualization**
 
-![alt text](image-2.png)
+![alt text](<Images/image-2 copy.png>)
 
 The decision tree uses all four features, with **variance** as the root splitting feature. Subsequent splits use skewness, curtosis, and variance to classify banknotes. The tree has a maximum depth of 3, making its decision rules relatively easy to interpret. The node colors and class counts show how the splits separate the two classes, although some leaf nodes still contain mixed-class observations.
 
 **2.2 — Manual decision tree decision boundary**
-![alt text](image-3.png)
+![alt text](Images/image-3.png)
 
 The manual decision tree creates rectangular decision regions using variance and skewness. Most observations fall within regions associated with their respective classes, although some overlap remains near the decision boundaries. The splits are easy to interpret, but the relatively simple boundaries may not capture every pattern in the data.
 
 **2.3 — Scikit-learn decision tree decision boundary**
 
-![alt text](image-4.png)
+![alt text](Images/image-4.png)
 
 The scikit-learn decision tree produces rectangular decision regions using variance and skewness. Its boundary closely matches the manual implementation, showing that both approaches learned similar classification rules from the same features and training data. Some observations overlap across the predicted regions, indicating that these two features do not perfectly separate the classes.
 
 **2.4 — Gini impurity and entropy: effect of tree depth**
 
-![alt text](image-5.png)
-
+![alt text](Images/image-5.png)
 Increasing tree depth improved training accuracy. Deeper trees can also become more complex, so cross-validation is useful when assessing performance.
 
 ## 3. Linear SVM — Two Features
@@ -53,7 +52,7 @@ A linear SVM was implemented from scratch using hinge loss, a regularization ter
 
 ### 3.1 — Manual Linear SVM Decision Boundary and Margins
 
-![alt text](image-6.png)
+![alt text](Images/image-6.png)
 
 ### 3.2 — Effect of Regularization Parameter \(C\)
 
@@ -81,18 +80,19 @@ Linear, polynomial, and RBF kernels were compared on a nonlinear two-moons datas
 
 ### 4.1 — Linear SVM Decision Boundary
 
-![alt text](image-7.png)
+![alt text](Images/image-7.png)
 
 **Observation:** The linear kernel creates a straight decision boundary, which cannot fully capture the curved structure of the two-moons dataset. Several observations lie in the opposite class region, illustrating the limitations of a linear model on nonlinear data.
 
 ### 4.2 — Polynomial SVM Decision Boundary
 
-![alt text](image-8.png)
+![alt text](Images/image-8.png)
 
 **Observation:** The polynomial kernel produces a curved decision boundary that captures some nonlinear structure. However, it does not separate the two classes as effectively as the RBF kernel, indicating that the chosen polynomial model is less suitable for this dataset.
 
 ### 4.3 — RBF SVM Decision Boundary
 
+![alt text](Images/image-9.png)
 **Observation:** The RBF kernel creates a flexible, nonlinear boundary that follows the two-moons structure more closely. It separates the classes more effectively than the linear and polynomial kernels, consistent with its 99% test accuracy.
 
 **Test-set performance**
